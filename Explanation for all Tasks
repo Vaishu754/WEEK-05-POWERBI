@@ -1,0 +1,296 @@
+📊 POWER BI BUSINESS INTELLIGENCE & SALES ANALYSIS
+Project Overview
+
+This project demonstrates the use of Microsoft Power BI for Business Intelligence and Data Analytics. The project uses a Superstore sales dataset to import, clean, model, analyze, visualize, and interpret business data.
+
+The project covers the complete Power BI workflow:
+
+Data Import → Data Cleaning → Data Modeling → DAX → Visualization → Interactive Dashboard → Business Insights
+
+The dataset contains three tables:
+
+Orders
+People
+Returns
+
+The main analysis is performed using the Orders table, while People and Returns are used to demonstrate data modeling and relationships.
+
+🔹 TASK 1 — Power BI Introduction & Data Import
+Objective
+
+The objective of this task is to understand the Power BI interface and import a suitable dataset for analysis.
+
+Work Completed
+
+Power BI Desktop was explored to understand its main components, including:
+
+Report View
+Data View
+Model View
+Fields/Data pane
+Visualizations pane
+
+The Orders table was imported into Power BI and its data was inspected.
+
+The available columns were identified, including:
+
+Order ID
+Order Date
+Ship Date
+Customer Name
+Segment
+Country
+City
+State
+Region
+Product Name
+Category
+Sub-Category
+Sales
+Quantity
+Discount
+Profit
+
+The data types of the columns were also checked. Text fields were identified as Text, date fields as Date, Sales/Profit/Discount as Decimal Number, and Quantity as Whole Number.
+
+Purpose of Power BI
+
+Power BI is a Business Intelligence and data visualization tool developed by Microsoft. It is used to import, clean, transform, analyze, and visualize data. It helps users identify trends, monitor business performance, and make data-driven decisions.
+
+🔹 TASK 2 — Data Cleaning & Preparation
+Objective
+
+The objective of this task is to prepare the imported dataset for analysis using Power Query.
+
+Work Completed
+
+The Orders dataset was inspected using Power Query.
+
+The following data preparation activities were performed:
+
+Checked for missing values
+Checked for incorrect values
+Checked duplicate records
+Verified column data types
+Renamed columns where required
+Removed unnecessary columns where applicable
+Applied suitable transformations
+Prepared the dataset for analysis
+
+Data cleaning is important because incorrect, duplicate, or inconsistent data can affect the accuracy of calculations and visualizations.
+
+Result
+
+The Orders table was prepared and structured properly for further analysis in Power BI.
+
+🔹 TASK 3 — Data Modeling & Relationships
+Objective
+
+The objective of this task is to create a basic data model using multiple tables and establish relationships between related tables.
+
+Tables Used
+
+Three tables were used:
+
+Orders
+People
+Returns
+Relationships
+
+The common column between Orders and Returns is:
+
+Order ID
+
+A relationship was created using this common field.
+
+The People table contains:
+
+Person
+Region
+
+The Region field was used to connect the People table with the relevant regional information in the Orders data model.
+
+Relationship Type
+
+The appropriate relationship/cardinality was selected based on the uniqueness of the columns in the tables.
+
+Result
+
+A basic Power BI data model was created, allowing information from multiple tables to be analyzed together.
+
+🔹 TASK 4 — DAX Calculated Columns & Measures
+Objective
+
+The objective of this task is to create DAX measures for calculating important business metrics.
+
+The following DAX measures were created:
+
+1. Total Sales
+Total Sales = SUM('Orders'[Sales])
+
+Calculates the total sales amount.
+
+2. Total Profit
+Total Profit = SUM('Orders'[Profit])
+
+Calculates the total profit.
+
+3. Average Sales
+Average Sales = AVERAGE('Orders'[Sales])
+
+Calculates the average sales value.
+
+4. Total Records
+Total Records = COUNTROWS('Orders')
+
+Counts the total number of records in the Orders table.
+
+5. Maximum Sales
+Maximum Sales = MAX('Orders'[Sales])
+
+Identifies the highest individual sales value.
+
+6. Minimum Sales
+Minimum Sales = MIN('Orders'[Sales])
+
+Identifies the lowest individual sales value.
+
+7. Profit Margin
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+
+Calculates the percentage of sales converted into profit.
+
+Result
+
+The DAX measures were displayed using Card visuals to provide a quick summary of business performance.
+
+🔹 TASK 5 — Power BI Visualizations
+Objective
+
+The objective of this task is to create meaningful visualizations for analyzing sales performance.
+
+The following visualizations were created:
+
+1. Sales by Category — Column Chart
+
+Fields:
+
+Category
+Total Sales
+
+This visualization compares sales performance between different product categories.
+
+2. Sales Trend Over Time — Line Chart
+
+Fields:
+
+Order Date
+Total Sales
+
+This visualization shows how sales changed over the years.
+
+3. Sales Distribution by Segment — Donut Chart
+
+Fields:
+
+Segment
+Total Sales
+
+This visualization shows the contribution of different customer segments to total sales.
+
+4. Category Performance — Table
+
+The table contains:
+
+Category
+Sub-Category
+Total Sales
+Total Profit
+Total Records
+
+It provides detailed information about product performance.
+
+5. Total Sales — Card
+
+The Total Sales measure was displayed using a Card visual to provide a quick overview of total revenue.
+
+Result
+
+Different visualization types were used to represent the data clearly and make business performance easier to understand.
+
+🔹 TASK 6 — Interactive Dashboard & Filters
+Objective
+
+The objective of this task is to create an interactive dashboard that allows users to explore business performance.
+
+Dashboard Components
+
+The dashboard contains three KPI Cards:
+
+Total Sales
+Total Profit
+Profit Margin %
+Visualizations
+
+The dashboard includes:
+
+Sales by Category — Column Chart
+Total Sales by Year — Line Chart
+Total Sales by Segment — Donut Chart
+Category Performance — Table
+Slicers
+
+Two interactive slicers were added:
+
+Region
+Category
+
+These slicers allow users to filter the dashboard dynamically.
+
+For example, selecting a particular region or category updates the KPI cards and visualizations according to the selected filter.
+
+Result
+
+An interactive Superstore Sales Performance Dashboard was created to provide a quick and user-friendly view of business performance.
+
+🔹 TASK 7 — Business Insights & Recommendations
+Objective
+
+The objective of this task is to analyze the dashboard and identify important business insights and recommendations.
+
+Key Business Insights
+1. Technology is a strong-performing category
+
+Technology generated the highest sales among the major categories, indicating strong customer demand for Technology products.
+
+2. Office Supplies has comparatively lower sales
+
+Office Supplies generated lower sales compared with Technology and Furniture, indicating an opportunity for improvement.
+
+3. Sales increased over time
+
+The sales trend shows an overall increase from 2012 to 2015, indicating positive business growth during the period.
+
+4. Consumer is the largest customer segment
+
+The Consumer segment contributes the largest share of total sales, making it an important customer group for the business.
+
+5. Overall business performance is profitable
+
+The dashboard shows approximately 12.64M total sales, 1.47M total profit, and approximately 12% profit margin.
+
+Business Recommendations
+
+Recommendation 1:
+The company should focus on the Technology category and Consumer segment by maintaining adequate inventory and using targeted marketing strategies.
+
+Recommendation 2:
+The company should analyze low-profit sub-categories by reviewing pricing, discounts, product costs, and shipping expenses to improve overall profitability.
+
+🎯 FINAL PROJECT CONCLUSION
+
+This project demonstrates how Power BI can be used throughout the complete data analytics process.
+
+The dataset was first imported and prepared, followed by data modeling and relationship creation. DAX measures were then developed to calculate important business metrics. Different visualizations were created to understand sales performance, and an interactive dashboard was developed using KPIs and slicers.
+
+The final analysis helped identify important trends, high-performing categories and segments, and areas that require improvement. These insights can support better business decisions related to sales, marketing, inventory, pricing, and profitability.
